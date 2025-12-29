@@ -1,0 +1,47 @@
+/* WelcomeBanner.css */
+
+.welcome-banner {
+  background-color: #f0f8ff; /* fondo suave azul claro */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* sombra ligera */
+}
+
+.welcome-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* para que en móvil se adapte */
+}
+
+.welcome-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.welcome-text p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.welcome-role {
+  color: #555;
+}
+
+.welcome-close {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  align-self: start;
+  padding: 0 5px;
+  margin-left: 10px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.welcome-close:hover {
+  color: #ff4500; /* cambia a naranja al pasar el mouse */
+}

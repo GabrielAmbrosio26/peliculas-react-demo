@@ -1,0 +1,175 @@
+/* Home/Results Section Styles */
+.home {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.results-section {
+  min-height: 400px;
+}
+
+.loading,
+.error,
+.no-results,
+.welcome {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+}
+
+.loading {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  color: #667eea;
+}
+
+.loading p {
+  font-size: 1.25rem;
+  margin: 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.error {
+  background: #fee;
+  color: #c33;
+  border: 2px solid #f99;
+  margin-bottom: 2rem;
+}
+
+.error p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.no-results {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.no-results p {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.welcome {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.welcome h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.welcome p {
+  font-size: 1.125rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.movies-container {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-title {
+  font-size: 1.5rem;
+  color: #222;
+  margin: 0 0 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home {
+    padding: 1.5rem 1rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+
+  .results-title {
+    font-size: 1.25rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .welcome h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 1rem 0.5rem;
+  }
+
+  .loading,
+  .error,
+  .no-results,
+  .welcome {
+    padding: 2rem 1rem;
+  }
+
+  .results-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .welcome h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+}
